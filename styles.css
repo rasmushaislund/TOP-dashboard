@@ -1,0 +1,98 @@
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+body {
+    background-image: url("./img/night-sky-large.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.para-author {
+    font-family: 'Caveat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, .9)
+}
+
+.github-link {
+    font-family: 'Caveat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    background: linear-gradient(90deg,
+     rgba(214,123,3,1) 10%,
+      rgba(214,141,3,1) 20%,
+       rgba(249,235,22,1) 30%,
+        rgba(109,161,65,1) 40%,
+         rgba(56,196,152,1) 50%,
+          rgba(30,84,190,1) 60%,
+           rgba(149,28,204,1) 70%,
+            rgba(201,37,137,1) 80%,
+             rgba(219,13,83,1) 90%,
+              rgba(255,0,0,1) 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+}
+
+.github-logo {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 62px;
+    opacity: .9;
+    transition: transform .4s ease-in-out
+}
+
+.github-logo:hover {
+    transform: rotate(720deg);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    background-color: rgba(255, 255, 255, .85);
+    border-radius: 3px;
+    box-shadow: 0 0 50px 1px rgb(2, 14, 17); 
+    margin: 75px 0 0 0;
+    height: 85vh;
+    width:  85vw;
+}
+
+.sidebar {
+    grid-row: 1 / -1;
+    background-color: rgba(3, 23, 69, 0.8);
+    padding: 20px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.header {
+    grid-column: 2 / -1;
+    padding: 20px;
+    border-bottom: 1px solid rgba(219, 13, 83, 1);
+}
+
+.dashboard {
+    padding: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.menu-para, .support-para, .logo-para {
+    color: rgba(255, 255, 255, 1)
+}
+
+.logo, .user-menu {
+    margin: 0 0 40px 0
+}
+
