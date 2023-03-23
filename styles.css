@@ -1,3 +1,19 @@
+ :root {
+    --small-user-image-height: 30px;
+    --small-user-image-width: 30px;
+    --large-user-image-height: 50px;
+    --large-user-image-width: 50px;
+    --icon-height: 20px;
+    --icon-width: 20px;
+    --icon-gap: 15px;
+
+    --para-greeting-size: .7rem;
+    --bold-para-text-small-size: .9rem;
+    --bold-para-text-large-size: 1.5rem;
+    --menu-para-size: 1rem;
+
+ }
+ 
  * {
     box-sizing: border-box;
     margin: 0;
@@ -42,8 +58,8 @@ body {
 }
 
 .github-logo {
-    height: 20px;
-    width: 20px;
+    height: var(--icon-height);
+    width: var(--icon-width);
     position: absolute;
     left: 62px;
     opacity: .9;
@@ -58,7 +74,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
-    background-color: rgba(255, 255, 255, .85);
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 3px;
     box-shadow: 0 0 50px 1px rgb(2, 14, 17); 
     margin: 75px 0 0 0;
@@ -72,17 +88,137 @@ body {
     padding: 20px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
 }
 
 .header {
     grid-column: 2 / -1;
-    padding: 20px;
-    border-bottom: 1px solid rgba(219, 13, 83, 1);
+    padding: 10px 30px;
+    /* border-bottom: 1px solid rgba(219, 13, 83, 1); */
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 0px 3px 10px rgb(0, 0, 0);
+    display: grid;
+    grid-template-rows: fit-content fit-content;
+    row-gap: 20px;
+    border-top-right-radius: 3px;
 }
 
 .dashboard {
     padding: 20px;
+    background-color: rgba(211, 211, 211, .8);
+    border-bottom-right-radius: 3px;
 }
+
+.icon, .menu-icon, .support-icon {
+    height: var(--icon-height);
+    width: var(--icon-width);
+}
+
+.header-search {
+    display: grid;
+    align-items: center;
+    gap: var(--icon-gap);
+    grid-template-columns: var(--icon-width) 5fr 2fr;
+}
+
+.header-search-right {
+    display: flex;
+    margin-left: auto;
+    column-gap: var(--icon-gap);
+    align-items: center;
+}
+
+.profile-image-small {
+    height: var(--small-user-image-height);
+    width: var(--small-user-image-width);
+}
+
+input[type="search"] {
+    appearance: none;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    border-radius: 50px;
+    height: fit-content;
+    min-width: 250px;
+    max-width: 500px;
+    margin-top: 1px;
+}
+
+.header-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--icon-gap);
+    align-items: center;
+}
+
+.profile-info {
+    display: grid;
+    grid-template-columns: var(--large-user-image-width) 1fr;
+    column-gap: var(--icon-gap);
+}
+
+.profile-info img {
+    height: var(--large-user-image-height);
+    width: var(--large-user-image-width);
+}
+
+.profile-name {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.para-greeting {
+    font-size: var(--para-greeting-size);
+    font-weight: 700;
+}
+
+.nav-link {
+    grid-column: -1 / -2;
+}
+
+.nav-link ul {
+    display: flex;
+    align-items: center;
+    column-gap: var(--icon-gap);
+    justify-content: flex-end;
+}
+
+.link {
+    background-color: rgba(3, 23, 69, 1);
+    padding: 7px 25px;
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 1);
+    font-size: var(--bold-para-text-small-size);
+    font-weight: 700;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: var(--large-user-image-width) 1fr;
+    column-gap: var(--icon-gap);
+    align-items: center;
+}
+
+.logo-image {
+    height: var(--large-user-image-height);
+    width: var(--large-user-image-width)
+}
+
+.logo-para {
+    font-size: var(--bold-para-text-large-size);
+    font-weight: 700;
+}
+
+.user-menu ul {
+    display: grid;
+    grid-template-columns: var(--icon-width) 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 20px;
+}
+
 
 li {
     list-style-type: none;
@@ -94,5 +230,15 @@ li {
 
 .logo, .user-menu {
     margin: 0 0 40px 0
+}
+
+.bold-para-text-large {
+    font-size: var(--bold-para-text-large-size);
+    font-weight: 700;
+}
+
+.bold-para-text-small {
+    font-size: var(--bold-para-text-small-size);
+    font-weight: 700;
 }
 
