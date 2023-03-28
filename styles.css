@@ -340,6 +340,10 @@ input[type="search"] {
     align-items: center;
 }
 
+svg path {
+    fill:rgba(255, 255, 255, 1)
+}
+
 .user-menu li p, .user-support li p {
     padding-top: .8px;
     font-size: var(--menu-para-size);
